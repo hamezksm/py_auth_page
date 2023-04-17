@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="container">
+            <section>
+                <button title="back to login"><</button>
+            </section>
+            <div class="mid-container">
+                <h1>ENTER YOUR DETAILS IN THE FIELDS BELOW</h1>
+                <form class="form-class">
+                    <div class="set-div">
+                        <div class="label-div"><label>First Name</label></div>
+                        <div class="text-div"><input type="text"></div>
+                    </div>
+                    <div class="set-div">
+                        <div class="label-div"><label>Last Name</label></div>
+                        <div class="text-div"><input type="text"></div>
+                    </div>
+                    <div class="set-div">
+                        <div class="label-div"><label>Username</label></div>
+                        <div class="text-div"><input type="text"></div>
+                    </div>
+                    <div class="set-div">
+                        <div class="label-div"><label>Email Address</label></div>
+                        <div class="text-div"><input type="text"></div>
+                    </div>
+                    <div class="set-div">
+                        <div class="label-div" id="pass1"><label>Password</label></div>
+                        <div class="text-div"><input type="password"></div>
+                    </div>
+                    <div class="set-div">
+                        <div class="label-div" id="pass2"><label>Confirm password</label></div>
+                        <div class="text-div"><input type="password"></div>
+                    </div>
+                    <div class="set-div">
+                        <div class="set-div-button">
+                            <button type="submit" class="button">REGISTER</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            let button = document.querySelector('.button');
+            button.addEventListener('click', function(){
+                let password1 = document.querySelector('#pass1').value;
+                let password2 = document.querySelector('#pass2').value;
+    
+                if (password1 === password2){
+                    window.alert("Password are similar");
+                    console.log(password1);
+                }else{
+                    window.alert("Incorrect match!");
+                    console.log(password1);
+                }
+            })
+        </script>
+    </body>
+</html> 
